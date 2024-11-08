@@ -1,0 +1,72 @@
+/* Фон для всього тіла */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b6e22;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+  }
+  
+  /* Центральний блок */
+  .bg-box {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-image: url('/img/cottage.png'); /* Зображення будинку в центрі */
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+  } 
+  
+  /* Ліва бокова частина з їжаками */
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    background-image: url('/img/hedgehog.png'); /* Зображення їжаків */
+    background-size: 30px 30px;
+    background-repeat: repeat-y;
+  }
+
+    /* Верхній ряд лампочок */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background-image: url('/img/lamp.png'); /* Зображення лампочок */
+        background-size: 30px 30px;
+        background-repeat: repeat-x;
+      }
+    
+      html::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        background-image: url('/img/bagel.png'); /* Зображення бубликів */
+        background-size: 30px 30px;
+        background-repeat: repeat-y;
+      }
+/* Трава внизу сторінки */
+    html::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 30px;
+      background-image: url('/img/green.png'); /* Зображення трави */
+      background-size: 30px 30px;
+      background-repeat: repeat-x;
+    }
